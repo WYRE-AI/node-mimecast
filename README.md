@@ -42,7 +42,7 @@ Create OAuth2 API credentials in the Mimecast Administration Console — see the
 | `threats` | Threat intelligence — TTP URL/attachment/impersonation logs, remediation, audit |
 | `queue` | Email delivery queue status |
 
-The client handles OAuth2 token acquisition/refresh and rate limiting internally. Errors surface as one of `MimecastAuthenticationError`, `MimecastForbiddenError`, `MimecastNotFoundError`, `MimecastValidationError`, `MimecastRateLimitError`, or the base `MimecastError` (all exported from the package root).
+The client handles OAuth2 token acquisition/refresh and rate limiting internally. Errors surface as one of `MimecastAuthenticationError`, `MimecastForbiddenError`, `MimecastNotFoundError`, `MimecastValidationError`, `MimecastRateLimitError`, `MimecastServerError`, or the base `MimecastError` (all exported from the package root).
 
 ## Development
 

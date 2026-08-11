@@ -72,7 +72,7 @@ export class ThreatsResource {
     );
 
     const data = Array.isArray(response) ? response : (response?.data ?? []);
-    return (Array.isArray(data) ? data[0] : data) as unknown as TtpUrlLog[];
+    return ((Array.isArray(data) ? data[0] : data) ?? []) as unknown as TtpUrlLog[];
   }
 
   /**
@@ -101,7 +101,7 @@ export class ThreatsResource {
     );
 
     const data = Array.isArray(response) ? response : (response?.data ?? []);
-    return (Array.isArray(data) ? data[0] : data) as unknown as TtpAttachmentLog[];
+    return ((Array.isArray(data) ? data[0] : data) ?? []) as unknown as TtpAttachmentLog[];
   }
 
   /**
@@ -130,7 +130,7 @@ export class ThreatsResource {
     );
 
     const data = Array.isArray(response) ? response : (response?.data ?? []);
-    return (Array.isArray(data) ? data[0] : data) as unknown as TtpImpersonationLog[];
+    return ((Array.isArray(data) ? data[0] : data) ?? []) as unknown as TtpImpersonationLog[];
   }
 
   /**

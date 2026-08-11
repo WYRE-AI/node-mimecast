@@ -9,6 +9,7 @@ import type {
   MessageInfo,
 } from '../types/messages.js';
 import type { MimecastResponse } from '../types/common.js';
+import { MimecastNotFoundError } from '../errors.js';
 
 export class MessagesResource {
   constructor(private readonly httpClient: HttpClient) {}
@@ -62,6 +63,9 @@ export class MessagesResource {
 
     const data = Array.isArray(response) ? response : (response?.data ?? []);
     const item = Array.isArray(data) ? data[0] : data;
+    if (item == null) {
+      throw new MimecastNotFoundError(`Mimecast returned no message info for ${id}`, response);
+    }
     return item as MessageInfo;
   }
 

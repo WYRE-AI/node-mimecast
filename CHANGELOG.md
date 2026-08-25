@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/WYRE-AI/node-mimecast/compare/v1.0.1...v1.0.2) (2026-08-25)
+
+
+### Bug Fixes
+
+* migrate to WYRE-AI org (npm scope, ghcr namespace, registry) ([#40](https://github.com/WYRE-AI/node-mimecast/issues/40)) ([137898a](https://github.com/WYRE-AI/node-mimecast/commit/137898a50703c475611e46f293784c03b45f8b13))
+
 ## [1.0.1](https://github.com/wyre-technology/node-mimecast/compare/v1.0.0...v1.0.1) (2026-08-11)
 
 

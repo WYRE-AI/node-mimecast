@@ -8,13 +8,13 @@ A Node.js/TypeScript client library for the [Mimecast](https://www.mimecast.com/
 ## Installation
 
 ```bash
-npm install @wyre-technology/node-mimecast
+npm install @wyre-ai/node-mimecast
 ```
 
 ## Usage
 
 ```typescript
-import { MimecastClient } from '@wyre-technology/node-mimecast';
+import { MimecastClient } from '@wyre-ai/node-mimecast';
 
 const client = new MimecastClient({
   clientId: process.env.MIMECAST_CLIENT_ID!,

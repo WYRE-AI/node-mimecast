@@ -1,5 +1,5 @@
 {
-  "name": "@wyre-technology/node-mimecast",
+  "name": "@wyre-ai/node-mimecast",
   "version": "1.0.1",
   "description": "Mimecast Email Security API client for Node.js",
   "type": "module",
@@ -50,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wyre-technology/node-mimecast.git"
+    "url": "https://github.com/WYRE-AI/node-mimecast.git"
   },
   "license": "MIT",
   "publishConfig": {

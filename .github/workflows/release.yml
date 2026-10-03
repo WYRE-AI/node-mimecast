@@ -51,12 +51,17 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      # This package has zero @wyre-ai dependencies (it IS the published
+      # package), so npm ci/build never need registry auth. Writing the
+      # write-scoped GITHUB_TOKEN into .npmrc is deferred to immediately
+      # before the one step that needs it, instead of sitting on disk
+      # through dependency install and build. (CWE-250-adjacent)
       - name: Configure npm for GitHub Packages
         run: |
           echo "@wyre-ai:registry=https://npm.pkg.github.com" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
-      - run: npm ci
-      - run: npm run build
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
